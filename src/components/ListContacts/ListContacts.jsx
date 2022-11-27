@@ -1,11 +1,11 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { List, Item, Name, DeleteBtn } from './ListContact.styled';
-import { removeContacts } from 'redux/contactSlice';
+import { deleteContact } from 'redux/operations';
 import { selectContacts, selectFilter } from 'redux/selectors';
 export const ListContacts = () => {
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
-
+console.log(contacts);
     const query = useSelector(selectFilter);
     function getvisiableTodos() {
         return contacts.filter(({ name }) =>
@@ -22,7 +22,7 @@ export const ListContacts = () => {
                     <DeleteBtn
                         id={id}
                         onClick={e => {
-                            dispatch(removeContacts(e.target.id));
+                            dispatch(deleteContact(e.target.id));
                         }}
                     >
                         delete
