@@ -6,7 +6,8 @@ import 'yup-phone';
 import { Form, Field, Button } from './FormAddContacts.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContact } from 'redux/operations';
-import {  selectContacts } from 'redux/selectors';
+import { selectContacts } from 'redux/selectors';
+
 const initialValues = {
     name: '',
     phoneNumber: '',
@@ -26,7 +27,7 @@ export function FormAddContacts() {
         const newContact = {
             id: nanoid(),
             name: name,
-            number: phoneNumber,
+            phoneNumber: phoneNumber,
         };
         contacts.find(
             contact =>

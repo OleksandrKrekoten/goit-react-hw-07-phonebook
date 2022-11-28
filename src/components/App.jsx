@@ -8,6 +8,9 @@ import { useDispatch } from 'react-redux';
 import { fetchContacts } from 'redux/operations';
 import { selectIsLoading, selectError, selectContacts } from 'redux/selectors';
 
+
+
+
 export function App() {
     const dispatch = useDispatch();
         const isLoading = useSelector(selectIsLoading);

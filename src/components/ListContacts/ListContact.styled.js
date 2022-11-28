@@ -14,14 +14,18 @@ export const Name = styled.p`
     margin-right: 16px;
 `;
 
+
 export const DeleteBtn = styled.button`
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid #0b0e24;
-    border-radius: 12px;
-    height: 20px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
     color: #0b0e24;
     background-color: transparent;
-    margin-left: 16px;
+    margin-right: 16px;
     transition: background-color 200ms ease-in;
     :hover,
     :focus {
@@ -29,3 +33,7 @@ export const DeleteBtn = styled.button`
         color: white;
     }
 `;
+export const Avatar = styled.img`
+width: 30px;
+margin-right: 16px;
+`
