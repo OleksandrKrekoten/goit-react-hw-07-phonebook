@@ -13,7 +13,6 @@ const initialValues = {
     phoneNumber: '',
 };
 export function FormAddContacts() {
-
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
     const validationSchema = Yup.object({
@@ -64,7 +63,6 @@ export function FormAddContacts() {
                         </label>
                         <Button type="submit" disabled={isSubmitting}>
                             Add contact{' '}
-                            
                         </Button>
                     </Form>
                 );

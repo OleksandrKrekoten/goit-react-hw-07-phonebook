@@ -1,23 +1,15 @@
 import { useSelector, useDispatch } from 'react-redux';
-import {
-    List,
-    Item,
-    Name,
-    DeleteBtn,
-    Avatar,
-} from './ListContact.styled';
+import { List, Item, Name, DeleteBtn, Avatar } from './ListContact.styled';
 import { deleteContact } from 'redux/operations';
 import { selectContacts, selectFilter } from 'redux/selectors';
 import { AvatarGenerator } from 'random-avatar-generator';
 import { BiTrash } from 'react-icons/bi';
-
 
 const generator = new AvatarGenerator();
 
 export const ListContacts = () => {
     const dispatch = useDispatch();
     const contacts = useSelector(selectContacts);
-    console.log(contacts);
     const query = useSelector(selectFilter);
     function getvisiableTodos() {
         return contacts.filter(({ name }) =>
@@ -32,7 +24,7 @@ export const ListContacts = () => {
                     <DeleteBtn
                         id={id}
                         onClick={e => {
-                            dispatch(deleteContact(e.target.id));
+                            dispatch(deleteContact(id));
                         }}
                     >
                         <BiTrash />
