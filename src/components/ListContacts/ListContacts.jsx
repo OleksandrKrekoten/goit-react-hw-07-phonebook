@@ -27,7 +27,7 @@ export const ListContacts = () => {
     const visiableTodos = getvisiableTodos();
     return (
         <List>
-            {visiableTodos.map(({ id, name, phoneNumber, avatar }) => (
+            {visiableTodos.map(({ id, name, phoneNumber }) => (
                 <Item key={id}>
                     <DeleteBtn
                         id={id}
